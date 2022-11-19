@@ -20,11 +20,15 @@ jobs:
         shell: bash
 
     steps:
-    - name: 'Az CLI login'
-      uses: azure/login@v1
-      with:
-        creds: '${{ secrets.AZURE_CREDENTIALS }}'
-        allow-no-subscriptions: 'true'
+    - name: 'Az login'
+    #  uses: azure/login@v1
+      run:  |
+        export ARM_CLIENT_ID="ce51239c-416f-4bc5-95eb-6ef968a6f310"
+        export ARM_CLIENT_SECRET="Y7E8Q~HLHVrO5mtpyPIsT-fz9VND1AlaTIezHbZ3"
+        export ARM_SUBSCRIPTION_ID="4f25621d-2baf-49dd-9803-3a4b2a104798"
+        export ARM_TENANT_ID="52c068f1-73f9-4230-b1a5-1c2394b72c4b"
+     # creds: '${{ secrets.AZURE_CREDENTIALS }}'
+     # allow-no-subscriptions: 'true'
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
       uses: actions/checkout@v3
