@@ -1,0 +1,10 @@
+prefix = "Cox"
+location = "East US 2"
+hub_address_space = ["10.1.0.0/16"]
+dns_server_ip = ["10.5.0.4","168.63.129.16"]
+hub_subnet_cidr = ["10.1.1.0/24"]
+hub_fw_subnet_cidr = ["10.1.0.0/24"]
+hub_bastion_subnet_cidr = ["10.1.2.0/24"]
+spoke_address_space = ["10.5.0.0/16"]
+spoke_subnet_cidr = ["10.5.1.0/24"]
+spoke_int_subnet_cidr = ["10.5.2.0/24"]
